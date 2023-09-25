@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+env/
+*.pyc
+__pycache__/
+
+# Django generated files
+*.log
+*.pot
+*.pyo
+db.sqlite3
+media/
+staticfiles/
+*.db
+
+# Secret key
+*.secret_key
+
+# Development settings
+local_settings.py
+
+# Visual Studio Code
+.vscode/
+
+
+
+
+
+
+
