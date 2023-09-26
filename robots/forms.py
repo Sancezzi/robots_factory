@@ -6,7 +6,12 @@ from .validators import validate_data_format
 
 class RobotCreationForm(forms.ModelForm):
     """
-    Data validation form.
+    Форма для валидации и создания записей о роботах.
+
+    Поля модели:
+    - model (модель робота)
+    - version (версия робота)
+    - created (дата создания записи)
     """
 
     model = forms.CharField(validators=[validate_data_format])
@@ -21,7 +26,7 @@ class RobotCreationForm(forms.ModelForm):
         model = self.cleaned_data.get('model')
         version = self.cleaned_data.get('version')
         
-        # Creating serial based on model and version
+        # Создание серийного номера на основе модели и версии
         instance.serial = f"{model}-{version}"
         
         if commit:

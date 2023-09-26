@@ -7,4 +7,4 @@ from .models import Robot
 @admin.register(Robot)
 class Robots(admin.ModelAdmin):
     fields = ('serial', 'model', 'version', 'created',)
-    list_display = ('serial', 'model', 'version', 'created',)
+    list_display = ('id', 'serial', 'model', 'version', 'created',)
