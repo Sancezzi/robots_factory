@@ -1,16 +1,16 @@
-from datetime import timedelta
 import json
+from datetime import timedelta
 from http import HTTPStatus
 
-from django.http import JsonResponse, HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.views import View
-from django.utils import timezone
 from django.db.models import Count
+from django.http import HttpResponse, JsonResponse
+from django.utils import timezone
+from django.views import View
+from django.views.decorators.csrf import csrf_exempt
 
+from .excel_export import ExcelExporter
 from .forms import RobotCreationForm
 from .models import Robot
-from .excel_export import ExcelExporter
 
 
 @csrf_exempt

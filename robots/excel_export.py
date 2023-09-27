@@ -1,5 +1,7 @@
-from openpyxl import Workbook
 from io import BytesIO
+
+from openpyxl import Workbook
+
 
 class ExcelExporter:
     @classmethod

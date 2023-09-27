@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import create_robot_view, RobotExcelExportView
+from .views import RobotExcelExportView, create_robot_view
 
 app_name = 'robots'
 
